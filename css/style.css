@@ -1,0 +1,563 @@
+/* 
+
+FS: 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+colors: #e67e22 #fdf2e9 #fae5d3 #cf711f #555 #333
+FW: 400 / 500 / 600 / 700
+WS: 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+/*====================
+    Header Styles
+====================*/
+.main-header {
+  height: 9.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fdf2e9;
+  padding: 0 4.8rem;
+}
+.site-logo {
+  height: 2rem;
+}
+.main-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+  list-style: none;
+}
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+}
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+.main-nav-link.nav-btn:link,
+.main-nav-link.nav-btn:visited {
+  color: #fff;
+  background-color: #e67e22;
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+}
+.main-nav-link.nav-btn:hover,
+.main-nav-link.nav-btn:active {
+  background-color: #cf711f;
+}
+.nav-toggle-btn {
+  padding: 1.6rem;
+  border: none;
+  background-color: transparent;
+  display: none;
+}
+.nav-icon {
+  width: 4.2rem;
+  height: 4.2rem;
+}
+.close-btn-icon {
+  display: none;
+}
+
+/*====================
+    Hero Styles
+====================*/
+.section-hero {
+  padding: 4.8rem 3.6rem 9.6rem;
+  background-color: #fdf2e9;
+}
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  align-items: center;
+}
+.hero-img {
+  width: 100%;
+}
+.delivered-box {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 8rem;
+}
+.delivered-faces {
+  display: flex;
+}
+.delivered-faces img {
+  margin-right: -1.6rem;
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  border: 3px solid #fdf2e9;
+}
+.delivered-faces img:last-child {
+  margin-right: 0;
+}
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.delivered-text span {
+  color: #cf711f;
+}
+/*=======================
+    Featured in Styles
+=======================*/
+.section-featured-in {
+  padding: 3.2rem 0;
+}
+.featured-heading {
+  font-size: 1.2rem;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  color: #777;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+.featured-img-box {
+  display: flex;
+  justify-content: space-around;
+}
+.featured-in-img {
+  height: 3.2rem;
+  filter: brightness(0);
+  opacity: 0.5;
+}
+/*========================
+    How It Works Styles
+========================*/
+.section-how {
+  padding: 9.6rem 0;
+}
+.step-number {
+  display: inline-block;
+  font-size: 8.6rem;
+  line-height: 1;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+  color: #ddd;
+}
+.step-text {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+.step-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.step-img-box img {
+  width: 35%;
+}
+.step-img-box::before,
+.step-img-box::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.step-img-box::before {
+  width: 60%;
+  padding-bottom: 60%;
+  background-color: #fdf2e9;
+  z-index: -2;
+}
+.step-img-box::after {
+  width: 45%;
+  padding-bottom: 45%;
+  background-color: #fae5d3;
+  z-index: -1;
+}
+
+/*=======================
+    Meals Styles
+=======================*/
+.section-meals {
+  padding: 9.6rem 0;
+}
+.meal {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2.4rem 4.8rem 0 rgba(0 0 0/ 10%);
+  transition: all 0.3s ease;
+}
+.meal:hover {
+  transform: translateY(-1.5rem);
+  box-shadow: 0 3.6rem 8rem 0 rgba(0 0 0/ 15%);
+}
+.meal-img {
+  width: 100%;
+}
+.meal-text {
+  padding: 3.6rem 2.4rem;
+}
+.tag {
+  padding: 0.4rem 0.8rem;
+  display: inline-block;
+  border-radius: 100px;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+.vegetarian {
+  background-color: #51cf66;
+}
+.vegan {
+  background-color: #94d82d;
+}
+.paleo {
+  background-color: #ffd43b;
+}
+.meal-heading {
+  font-size: 2.4rem;
+  color: #333;
+  margin-bottom: 2.4rem;
+  font-weight: 700;
+}
+.meal-attributes {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+.meal-attribute {
+  font-size: 1.8rem;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+.meal-icon {
+  color: #cf711f;
+  width: 2rem;
+  height: 2rem;
+}
+
+/*=========================
+    Testimonials Styles
+=========================*/
+.section-testimonials {
+  background-color: #fdf2e9;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+}
+.testimonials {
+  padding: 6.2rem;
+  align-self: center;
+}
+.testi-img {
+  height: 6.2rem;
+  border-radius: 50%;
+  margin-bottom: 1.6rem;
+}
+.testi-text {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  margin-bottom: 2.4rem;
+}
+.testi-author {
+  font-size: 1.6rem;
+  color: #6f6f6f;
+}
+.gallery {
+  padding: 1.6rem;
+  align-self: center;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+.gallery-figure {
+  overflow: hidden;
+}
+.gallery-img {
+  width: 100%;
+  display: block;
+  transition: all 1s ease-out;
+}
+.gallery-img:hover {
+  transform: scale(1.2);
+}
+
+/*====================
+    Pricing Styles
+====================*/
+.section-pricing {
+  padding: 9.6rem 0;
+}
+.pricing-plan {
+  background-color: #fef7f2;
+  border-radius: 12px;
+  padding: 4.8rem;
+  width: 75%;
+}
+.plan-header {
+  margin-bottom: 4.8rem;
+  text-align: center;
+}
+.plan-title {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #cf711f;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+.plan-price {
+  font-size: 6.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+.plan-price span {
+  font-size: 3.6rem;
+}
+.plan-text {
+  font-size: 1.6rem;
+  color: #777;
+}
+.pricing-cta-box {
+  margin-top: 4.8rem;
+}
+.crossed {
+  text-decoration: line-through;
+  color: #777;
+}
+.best--value {
+  position: relative;
+  overflow: hidden;
+  background-color: #fdf2e9;
+}
+.best--value::before {
+  content: "best value";
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  padding: 1rem 8rem;
+  display: inline-block;
+  background-color: #ffd43b;
+  font-weight: 600;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 7%;
+  right: -19%;
+  box-shadow: 0 5px 10px 0 rgba(0 0 0/8%);
+}
+
+/*====================
+    Features Styles
+====================*/
+.section-features {
+  padding: 9.6rem;
+}
+
+.feature-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #cf711f;
+  padding: 1.6rem;
+  background-color: #fdf2e9;
+  border-radius: 50%;
+  margin-bottom: 2.4rem;
+}
+.feature-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+.feature-text {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+.taxes-box {
+  text-align: center;
+}
+.taxes {
+  font-size: 1.6rem;
+  color: #777;
+}
+
+/*====================
+    CTA Styles
+====================*/
+.section-cta {
+  padding: 9.6rem 0;
+}
+.cta {
+  background: linear-gradient(to bottom right, #eb984e, #e67e22);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  box-shadow: 0 2.4rem 3.6rem 0 rgba(0 0 0/ 20%);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.cta-form {
+  padding: 4.8rem;
+}
+.cta-form .heading-secondary {
+  color: #5c320e;
+  margin-bottom: 3.6rem;
+}
+.cta-form .form-text {
+  color: #5c320e;
+  margin-bottom: 3.6rem;
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+.cta-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.4rem;
+}
+.cta-form label {
+  color: #5c320e;
+  font-size: 1.6rem;
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+.cta-form-input,
+.cta-form-select {
+  padding: 1.6rem;
+  background-color: #fdf2e9;
+  border: none;
+  border-radius: 9px;
+  font-family: inherit;
+  width: 100%;
+  font-size: 1.6rem;
+}
+.cta-form-input::placeholder,
+.cta-form-select::placeholder {
+  font-family: inherit;
+
+  color: #999;
+}
+.form--btn {
+  background-color: #5c320e;
+  color: #fff;
+  border-radius: 9px;
+  padding: 1.6rem;
+  align-self: end;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.form--btn:hover,
+.form--btn:active {
+  background-color: #fdf2e9;
+  color: #5c320e;
+}
+.cta-image {
+  background: linear-gradient(
+      to bottom right,
+      rgba(235, 151, 78, 0.35),
+      rgba(230, 125, 34, 0.35)
+    ),
+    url("../img/eating.jpg") center center/cover;
+}
+.section-cta *:focus {
+  box-shadow: 0 0 0 5px rgba(253, 242, 233, 0.5);
+}
+
+/*====================
+    Footer Styles
+====================*/
+footer {
+  padding: 12.8rem 0 9.6rem 0;
+  border-top: 1px solid #eee;
+}
+.footer-heading {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 3.6rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+  gap: 4.8rem;
+}
+footer .site-logo {
+  height: 1.8rem;
+  margin-bottom: 3.4rem;
+}
+.social-list {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+  margin-bottom: 2.4rem;
+}
+.social-link:link,
+.social-link:visited {
+  font-size: 2rem;
+  color: #777;
+  transition: all 0.3s ease;
+}
+.social-link:hover,
+.social-link:active {
+  color: #555;
+}
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+address {
+  font-style: normal;
+  display: flex;
+  gap: 1.8rem;
+  flex-direction: column;
+}
+.address {
+  font-size: 1.6rem;
+  color: #555;
+  line-height: 1.5;
+}
+.address-link a:link,
+.address-link a:visited {
+  font-size: 1.6rem;
+  color: #777;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.address-link a:hover,
+.address-link a:active {
+  color: #555;
+}
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+.footer-link:link,
+.footer-link:visited {
+  color: #777;
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+}
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
+}

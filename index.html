@@ -3,13 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Omnifood</title>
+    <meta
+      name="description"
+      content="The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to your personal tastes and nutritional needs. We have delivered 250,000+ meals last year!"
+    />
+    <title>Omnifood - Never cook again!</title>
+    <!-- Browser Icon -->
+    <link rel="icon" href="img/favicon-small.png" />
+    <!-- to add icon to Apple and Android devices home screen -->
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Icon package (ionicon) -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -18,11 +29,13 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <!-- Style Sheets -->
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/queries.css" />
   </head>
   <body>
+    <!-- Header | Navigation -->
     <header role="banner" class="main-header">
       <div class="logo">
         <a href="#">
@@ -37,9 +50,11 @@
         <ul class="main-nav-list">
           <li><a href="#how" class="main-nav-link">How it works</a></li>
           <li><a href="#meals" class="main-nav-link">Meals</a></li>
-          <li><a href="#" class="main-nav-link">Testimonials</a></li>
-          <li><a href="#" class="main-nav-link">Pricing</a></li>
-          <li><a href="#" class="main-nav-link nav-btn">Subscribe now</a></li>
+          <li><a href="#testi" class="main-nav-link">Testimonials</a></li>
+          <li><a href="#pricing" class="main-nav-link">Pricing</a></li>
+          <li>
+            <a href="#cta" class="main-nav-link nav-btn">Subscribe now</a>
+          </li>
         </ul>
       </nav>
       <button class="nav-toggle-btn">
@@ -104,11 +119,15 @@
             </div>
           </div>
           <div class="hero-img-box">
-            <img
-              src="img/hero.png"
-              alt="a lady eating food, food bowls, and food in storage"
-              class="hero-img"
-            />
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp" />
+              <source srcset="img/hero-min.png" type="image/png" />
+              <img
+                src="img/hero-min.png"
+                alt="a lady eating food, food bowls, and food in storage"
+                class="hero-img"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -148,14 +167,14 @@
       </section>
 
       <!-- How it works -->
-      <section class="section-how">
+      <section class="section-how" id="how">
         <div class="container m-b-lg">
           <span class="subheading">how it works</span>
           <h2 class="heading-secondary">
             Your daily dose of health in 3 simple steps
           </h2>
         </div>
-        <div class="container grid grid-2-col grid-center-v">
+        <div class="steps container grid grid-2-col grid-center-v">
           <!-- Step 1 -->
           <div class="step-text-box">
             <span class="step-number">01</span>
@@ -202,7 +221,7 @@
       </section>
 
       <!-- Meals -->
-      <section class="section-meals">
+      <section class="section-meals" id="meals">
         <div class="container text-center">
           <span class="subheading">Meals</span>
           <h2 class="heading-secondary">
@@ -352,7 +371,7 @@
       </section>
 
       <!-- Testimonials -->
-      <section class="section-testimonials">
+      <section class="section-testimonials" id="testi">
         <div class="testimonials">
           <span class="subheading">Testimonials</span>
           <h2 class="heading-secondary">Once you try it, you can't go back</h2>
@@ -505,7 +524,7 @@
       </section>
 
       <!-- Pricing -->
-      <section class="section-pricing">
+      <section class="section-pricing" id="pricing">
         <!-- Pricing Section Heading -->
         <div class="container">
           <span class="subheading">Pricing</span>
@@ -649,7 +668,7 @@
       </section>
 
       <!-- CTA -->
-      <section class="section-cta">
+      <section class="section-cta" id="cta">
         <div class="container">
           <div class="cta">
             <div class="cta-form">
@@ -659,10 +678,11 @@
                 eating well today. You can cancel or pause anytime. And the
                 first meal is on us!
               </p>
-              <form action="" method="POST" class="cta-form-grid">
+              <form name="sign-up" class="cta-form-grid" netlify>
                 <div class="input-group">
                   <label for="full-name">Full name</label>
                   <input
+                    name="full-name"
                     id="full-name"
                     type="text"
                     class="cta-form-input"
@@ -673,6 +693,7 @@
                 <div class="input-group">
                   <label for="email-address">Email address</label>
                   <input
+                    name="email-address"
                     id="email-address"
                     type="text"
                     class="cta-form-input"
@@ -684,7 +705,7 @@
                   <label for="selection">Where did you hear from us?</label>
                   <select
                     id="selection"
-                    name="advertise"
+                    name="select-where"
                     class="cta-form-select"
                     required
                   >
@@ -746,7 +767,8 @@
             </li>
           </ul>
           <p class="copyright">
-            Copyright &copy; 2022 by Omnifood. Inc. All rights reserved.
+            Copyright &copy; <span class="year">Year</span> by Omnifood. Inc.
+            All rights reserved.
           </p>
         </div>
         <div class="address-col">
@@ -803,6 +825,7 @@
         </div>
       </div>
     </footer>
+    <!-- Scripts -->
     <script src="js/script.js"></script>
   </body>
 </html>

@@ -1,0 +1,51 @@
+/*-============ Steps Rules ============-*/
+.step {
+  &__text-box {
+  }
+  &__number {
+    display: inline-block;
+    font-size: var(--font-x-huge);
+    color: var(--color-grey-light);
+    font-weight: var(--weight-dark);
+    margin-bottom: 1.6rem;
+  }
+  &__heading {
+    font-size: var(--font-sm-large);
+    letter-spacing: -0.5px;
+    line-height: var(--line-height-small);
+    color: var(--color-grey-dark);
+    margin-bottom: 2rem;
+  }
+  &__paragraph {
+    font-size: var(--font-medium);
+    line-height: var(--line-height-medium);
+  }
+  &__image-box {
+    text-align: center;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      display: inline-block;
+      border-radius: 50%;
+
+      @include centerVH;
+    }
+    &::before {
+      width: 45%;
+      padding-bottom: 45%;
+      background-color: var(--color-tint-dark);
+      z-index: -1;
+    }
+    &::after {
+      width: 60%;
+      padding-bottom: 60%;
+      background-color: var(--color-tint);
+      z-index: -2;
+    }
+  }
+  &__image {
+    width: 35%;
+  }
+}

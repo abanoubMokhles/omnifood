@@ -1,0 +1,37 @@
+/*-============ CSS Custom Properties ============-*/
+
+:root {
+  // Colors
+  --color-primary: #e67e22;
+  --color-tint: #fdf2e9;
+  --color-tint-dark: #fae5d3;
+  --color-shade: #cf711f;
+  --color-grey-dark: #333;
+  --color-grey-medium: #555;
+  --color-grey-semi-light: #777;
+  --color-grey-light: #ddd;
+  --color-light: #fff;
+
+  // Font Sizes
+  --font-x-huge: 8.6rem;
+  --font-huge: 6.2rem;
+  --font-x-large: 5.2rem;
+  --font-md-large: 4.4rem;
+  --font-sm-large: 2.4rem;
+  --font-large: 2rem;
+  --font-medium: 1.8rem;
+  --font-small: 1.6rem;
+  --font-x-small: 1.4rem;
+
+  // Line Height
+  --line-height-default: 1;
+  --line-height-small: 1.05;
+  --line-height-medium: 1.5;
+  --line-height-large: 1.6;
+
+  // Font Weight
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 600;
+  --weight-dark: 700;
+}

@@ -1,0 +1,31 @@
+/*-============ Typography Rules ============-*/
+
+.heading-primary {
+  font-size: var(--font-x-large);
+  letter-spacing: -0.5px;
+  line-height: var(--line-height-small);
+  color: var(--color-grey-dark);
+  margin-bottom: 2.4rem;
+}
+.heading-secondary {
+  font-size: var(--font-md-large);
+  letter-spacing: -0.5px;
+  line-height: var(--line-height-small);
+  color: var(--color-grey-dark);
+  margin-bottom: 2.4rem;
+}
+.heading-tertiary {
+  font-size: var(--font-md-large);
+  letter-spacing: -0.5px;
+  line-height: var(--line-height-small);
+  color: var(--color-grey-dark);
+  margin-bottom: 2.4rem;
+}
+.subheading {
+  font-size: var(--font-x-small);
+  font-weight: var(--weight-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  color: var(--color-shade);
+  margin-bottom: 1.6rem;
+}

@@ -1,0 +1,34 @@
+/*-============ Buttons Rules ============-*/
+
+.btn {
+  border: 3px solid transparent;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 1.6rem 2.4rem;
+  font-size: var(--font-medium);
+  border-radius: 9px;
+  transition: all 0.3s;
+
+  &:not(:last-child) {
+    margin-right: 1.6rem;
+  }
+
+  &--primary {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+
+    &:hover {
+      background-color: var(--color-shade);
+    }
+  }
+  &--light {
+    background-color: var(--color-light);
+    color: var(--color-grey);
+
+    &:hover {
+      background-color: var(--color-tint);
+      border: 3px solid var(--color-light);
+    }
+  }
+}

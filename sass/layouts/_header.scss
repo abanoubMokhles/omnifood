@@ -1,0 +1,55 @@
+/*-============ Header Rules ============-*/
+
+.header {
+  background-color: var(--color-tint);
+  padding: 4rem 2.4rem 8rem;
+
+  &__container {
+    max-width: 130rem;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 6rem;
+    align-items: center;
+  }
+
+  &__left {
+  }
+  &__right {
+  }
+  &__text {
+    font-size: var(--font-large);
+    line-height: var(--line-height-medium);
+    margin-bottom: 4.8rem;
+  }
+  &__customer-box {
+    margin-top: 4.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  }
+  &__customer-images {
+  }
+  &__customer-face {
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    border: 3px solid var(--color-light);
+
+    &:not(:last-child) {
+      margin-right: -1.6rem;
+    }
+  }
+  &__delivered {
+    font-size: var(--font-medium);
+    font-weight: var(--weight-medium);
+
+    span {
+      color: var(--color-shade);
+    }
+  }
+  &__image {
+    width: 100%;
+  }
+}
